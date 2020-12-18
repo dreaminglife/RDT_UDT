@@ -8,12 +8,10 @@ def send(content, to):
     send_sock.sendto(checksum + content, to)
 
 if __name__ == "__main__":
-    dest_addr = argv[1]
-    dest_port = int(argv[2])
-    dest = (dest_addr, dest_port)
-    listen_addr = argv[3]
-    listen_port = int(argv[4])
-    listen = (listen_addr, listen_port)
+    dest_port = int(argv[1])
+    dest = ("127.0.0.1", dest_port)
+    listen_port = int(argv[2])
+    listen = ("127.0.0.1", listen_port)
 
     send_sock = socket(AF_INET, SOCK_DGRAM)
     recv_sock = socket(AF_INET, SOCK_DGRAM)
