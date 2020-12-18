@@ -1,6 +1,6 @@
-# RDT Over UDP
+# RDT UDP
 
-A simple implementation of RDT (Reliable Data Transfer) 3.0.  
+A simple implementation of RDT (Reliable Data Transfer)
 You need to run in correct order: interceptor, receiver, then sender.
 
 <img src="screenshot.png" width="1022">
@@ -14,10 +14,10 @@ python interceptor.py 1600 1601 1602 1603
 
 ## Receiver
 ```bash
-python receiver.py 127.0.0.1 1602 127.0.0.1 1601
+python receiver.py 1602 1601
 ```
 
 ## Sender
 ```bash
-python sender.py 127.0.0.1 1600 127.0.0.1 1603 file.txt
+python sender.py 1600 1603 file.txt
 ```
